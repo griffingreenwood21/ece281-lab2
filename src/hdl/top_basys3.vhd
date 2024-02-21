@@ -87,7 +87,7 @@ architecture top_basys3_arch of top_basys3 is
     end component sevenSegDecoder;
 
   -- create wire to connect button to 7SD enable (active-low)
-    signal w_7SD_EN_n : std_logic_vector(3 downto 0);
+    signal w_7SD_EN_n : std_logic;
   
 begin
 	-- PORT MAPS ----------------------------------------
@@ -107,9 +107,7 @@ begin
 	-- display 7SD 0 only when button pushed
 	-- other 7SD are kept off
 	-----------------------------------------------------
-	an(3) <= not btnC;
-	an(2) <= not btnC;
-	an(1) <= not btnC;
-	an(0) <= not btnC;
+	w_7SD_EN_n <= not btnC;
+	an <= (0 => w_7SD_EN_n, others => '1');
 	
 end top_basys3_arch;
