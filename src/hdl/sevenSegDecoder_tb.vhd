@@ -15,7 +15,8 @@
 --| CREATED       : 02/21/2024
 --| DESCRIPTION   : This file implements a seven segment decoder test bench.
 --|
---| DOCUMENTATION : I didn't receive any help on this assignment.
+--| DOCUMENTATION : I asked Capt Yarbrough for help and he told me to select basys3 as the target board.
+--|                 I received no other help on this assignment.
 --|
 --+----------------------------------------------------------------------------
 --|
